@@ -1,17 +1,12 @@
 extends layout
 
 block content
-  div#main
-    table 
-        tr
-            td
-                a(style='background: red; padding-top: 15px; padding-bottom: 15px; padding-left: 5px; padding-right: 5px; color: white; border-radius: 4px; text-decoration: none; font-size: 15px; display: inline-block; margin: 20px;', href="/")= "Home" 
-            td
-                a(style='background: red; padding-top: 15px; padding-bottom: 15px; color: white; border-radius: 4px; text-decoration: none; font-size: 15px; display: inline-block; margin: 20px;', href="/about")= "About"
-    br            
-    h1
+    p 
+        a(href="/")= "Home"
+    p 
+        a(href="/about")= "About"
+    h1.
         Property Search History
-    br    
     ul
         each user, i in userlist
             li

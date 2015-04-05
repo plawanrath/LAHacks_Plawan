@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div#main
+    p
+        a(href="/")= "Home"
+    p
+        a(href="/userlist")= "Search History"
+    p 
+        a(href="/about")= "About"
+        br
+        br
+    h1= title
+    br
+    p Region                   = #{city}
+    p State 	               = #{state}
+    p Type                     = city
+    p Weather                  = #{weather} (provided by Mashape weather API)
+    br
+    p Physical Location:
+    p Latitude 	= #{lat}
+    p Longitude = #{lon}
+    br
+    p Average home prices = $#{avg_home_value}
+    br
+    p Median Single Family home = $#{med_single_family}
+    br
+    p Average Property Tax = $#{prop_tax}
+    p Percentage of Owners = #{percent_owners}%
+    p Median Household Income = $#{med_household_income}
+    p Median Age = #{med_age} yrs
+    br
+    p Average Commute Time = #{avg_commute_time} minutes
+    br
+    p Final Index = #{final_index}
