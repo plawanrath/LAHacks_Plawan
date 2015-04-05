@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div#main
+    table
+        tr
+          td
+            a(style='background: red; padding-top: 15px; padding-bottom: 15px; padding-left: 5px; padding-right: 5px; color: white; border-radius: 4px; text-decoration: none; font-size: 15px; display: inline-block; margin: 20px;', href="/userlist")= "Search History"
+          td 
+            a(style='background: red; padding-top: 15px; padding-bottom: 15px; padding-left: 5px; padding-right: 5px; color: white; border-radius: 4px; text-decoration: none; font-size: 15px; display: inline-block; margin: 20px;', href="/about")= "About"
+    br
+    h1= title
+    br
+    form(name="adduser",id="searchForm",method="post",action="/adduser")
+      div.input
+        input(type="text", id="s", name="username", value="Enter your search")
+      input(type="submit", id="searchSubmit", value="") 
